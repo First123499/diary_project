@@ -1,20 +1,20 @@
-$.urlParam = function(name){
-    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-    return results[1] || 0;
-  }
+
   $(function(){
     //Get user Id from querystring parameters
-    var id = $.urlParam('id');
+    $("#signupForm").validate({
+        submitHandler: function(form) {
     //Create a Web Api url for getting a member info
     var url = "http://localhost:3000/db/" + id;
     console.log(url);
-    $.getJSON(url, function(data, status) {
+    $.postJSON(url, function(data, status) {
       console.log(data);
-      //Set data to form elements
-      $('#username').val(data.username);
-      $('#fname').val(data.fname);
-      $('#lname').val(data.lname);
-      $('#password').val(data.password);
+          
+        alert('Created successfully');
+        console.log("Inserted " + data);
+        setTimeout(window.location.href = "regist.html", 1000);
+      });
+      alert("Submit");
+    },
       
       
       //If user click cancel, go to userinfo page
@@ -47,5 +47,5 @@ $.urlParam = function(name){
         });
       });
     });
-  });
-  
+  }});
+}); 
