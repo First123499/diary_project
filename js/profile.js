@@ -10,13 +10,15 @@ $(function () {
             // var id = $.urlParam('id');
             //Create a Web Api url for getting a member info
             var url = "http://localhost:3000/db/" + id;
-                $.post(url, newuser, function (data, status) {
-                    alert('Created successfully');
-                    console.log("Inserted " + data);
-                    setTimeout(window.location.href = "regist.html", 1000);
-                  });
-                  alert("Submit");
-                },
+            console.log(url);
+            $.post(url, function (data, status) {
+                console.log(data);
+                //document.getElementById('username').value = '';
+                alert('Created successfully');
+                console.log("Inserted " + data);
+                setTimeout(window.location.href = "regist.html", 1000);
+
+                
 
 
                 //If user click edit, go to edituser page

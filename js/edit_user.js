@@ -8,13 +8,11 @@
     console.log(url);
     $.postJSON(url, function(data, status) {
       console.log(data);
-          
-        alert('Created successfully');
-        console.log("Inserted " + data);
-        setTimeout(window.location.href = "regist.html", 1000);
-      });
-      alert("Submit");
-    },
+      //Set data to form elements
+      alert('Created successfully');
+      console.log("Inserted " + data);
+      setTimeout(window.location.href = "regist.html", 1000);
+      
       
       
       //If user click cancel, go to userinfo page

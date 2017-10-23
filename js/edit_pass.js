@@ -12,14 +12,10 @@
     $.post(url, function(data, status) {
       // console.log(data);
       //Set data to form elements
-      var url = "http://localhost:3000/db";
-      $.post(url, newuser, function (data, status) {
-        alert('Created successfully');
-        console.log("Inserted " + data);
-        setTimeout(window.location.href = "regist.html", 1000);
-      });
-      alert("Submit");
-    },
+      $('.username').append(data.username);
+      alert('Created successfully');
+      console.log("Inserted " + data);
+      setTimeout(window.location.href = "regist.html", 1000);
   
       $("#cancel").click(function () {
         window.location.href = "viewuser.html?id=" + data.id;
