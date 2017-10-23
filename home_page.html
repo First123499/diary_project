@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +10,46 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script src="jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="css/index.css">
-    
+
 </head>
+
 <body>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="text" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand">Lucille diary</a>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="profile.html">Profile</a>
-                            </li>
-                            <li>
-                                <a href="diary.html">Diary</a>
-                            </li>
-                            <li>
-                                <a href="index.html">Sign Out</a>
-                            </li>
-        
-                            
-                        </ul>
-                    </div>
-        
-                </div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="text" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Lucille diary</a>
             </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="profile.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="diary.html">Diary</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Sign Out</a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <button >Create diary</button>
+    <br><br><br><br>
+    <form action="/action_page.php">
+
+        <textarea class="textarea" name="message" rows="100" cols="80" >The cat was playing in the garden.</textarea>
+        <br>
+        <input type="submit">
+
+    </form>
+
 </body>
+
 </html>

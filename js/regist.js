@@ -18,16 +18,16 @@ $(function () {
         //form.submit();
         var newuser = {};
         var id = null;
-        $.get("http://localhost:3000/db", function (data) {
-          id = data[data.size - 1].id + 1;
-        });
+        // $.get("http://localhost:3000/db", function (data) {
+        //   id = data[data.size - 1].id + 1;
+        // });
         newuser.id = null;
         newuser.fname = $("#fname").val();
         newuser.lname = $("#lname").val();
         newuser.username = $("#username").val();
         newuser.password = $("#password").val();
-        newuser.confirmpassword = $("#confirmpassword").val();
-        newuser.status = $("#status").val();
+        //newuser.confirmpassword = $("#confirmpassword").val();
+        //newuser.status = $("#status").val();
         console.log(newuser);
         var url = "http://localhost:3000/db";
         $.post(url, newuser, function (data, status) {
