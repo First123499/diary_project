@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>resit</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sign_in.css">
+    <script type="text/javascript" src="js/regist.js"></script>
+
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="text" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Lucille diary</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
+                        <div id="modal-wrapper" class="modal">
+                            <form class="modal-content animate" action="home_page.html">
+                                <div class="imgcontainer">
+                                    <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+
+                                    <h1 style="text-align:center">Login Form</h1>
+                                </div>
+                                <div class="container">
+                                    <br>
+                                    <input type="text" placeholder="Enter Username" name="username" style="width:40%;">
+                                    <br>
+                                    <input type="text" placeholder="Enter Lastname" name="lastname" style="width:40%;">
+                                    <br>
+                                    <input type="password" placeholder="Enter Password" name="password" style="width:40%;">
+                                    <br>
+                                    <button type="submit" style="width:40%;">Login</button>
+                                    <br>
+                                    <input type="checkbox" style="margin:26px 30px;"> Remember me
+                                    <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="text-align:center">Register Form</div>
+    <div class="form">
+        <form class="well form-horizontal" action="" method="POST" role="form" name="signupForm">
+            <div class="container">
+                <input type="text" placeholder="Enter Firstname" name="fname" style="width:40%">
+                <br>
+                <input type="text" placeholder="Enter Lastname" name="lname" style="width:40%">
+                <br>
+                <input type="text" placeholder="Enter Username" name="username" style="width:40%">
+                <br>
+                <input type="password" placeholder="Enter Password" name="password" style="width:40%;">
+                <br>
+                <input type="password" placeholder="Confirm Password" name="confirmpassword" style="width:40%;">
+                <br>
+                <button type="submit" name="regis" style="width:40%">Register</button>
+
+                <!-- <br>
+            <input type="text" placeholder="Enter Username" name="username" style="width:40% ;">
+            <br>
+            <input type="password" placeholder="Enter Password" name="password" style="width:40%;">
+            <br>
+            <button type="submit" style="width:40%;">Login</button>
+            <br>
+            <input type="checkbox" style="margin:26px 30px;"> Remember me
+            <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a> -->
+            </div>
+        </form>    
+    </div>
+
+</body>
+
+</html>
