@@ -1,0 +1,1 @@
+addData.fname = $("#addFName").val();
