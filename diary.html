@@ -9,14 +9,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script src="jquery-3.2.1.min.js"></script>
+    <style>
+        form * {
+          display: block;
+          margin: 10px;
+        }
+        </style>
+        <script language="Javascript" >
+        function download(filename, text) {
+          var pom = document.createElement('a');
+          pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + 
+        
+        encodeURIComponent(text));
+          pom.setAttribute('download', filename);
+        
+          pom.style.display = 'none';
+          document.body.appendChild(pom);
+        
+          pom.click();
+        
+          document.body.removeChild(pom);
+        }
+        </script>
 </head>
 
 <body>
-    <form action="/action_page.php">
-        <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
-        <br>
-        <input type="submit">
-    </form>
+    <form onsubmit="download(this['name'].value, this['text'].value)">
+        <input type="text" name="name" value="test.txt">
+        <textarea rows=10 cols=50 name="text">PLEASE WRITE ANSWER HERE. </textarea>
+      <input type="radio" name="radio" value="Option 1" onclick="getElementById('problem').value=this.value;"> Option 1<br>
+      <input type="radio" name="radio" value="Option 2" onclick="getElementById('problem').value=this.value;"> Option 2<br>
+      <form onsubmit="download(this['name'].value, this['text'].value)">
+      <input type="text" name="problem" id="problem">
+        <input type="submit" value="SAVE">
+        <form action=""></form>
+      </form>
+      <form action="" method="post"></form>
     
 
 </body>
